@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Jackson Silva, Desenvolvedor Front-End">
+    <title>Jackson Silva | Desenvolvedor Front-End</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <div class="perfil-container">
+                <img src="imagens/imagemperfil.png" alt="Foto de perfil de Jackson Silva" class="foto-perfil">
+                <div class="info-perfil">
+                    <h1 class="nome">Jackson Silva</h1>
+                    <p class="subtitulo">Desenvolvedor Front-End</p>
+                </div>
+            </div>
+            
+            <div class="redes-sociais">
+                <a href="https://www.linkedin.com/in/jackson-silva-478947187/" class="botao-rede" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/JacksonSilva06" class="botao-rede" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </header>
+
+        <main class="conteudo-principal">
+            <article class="sobre">
+                <h2><i class="fas fa-user"></i> Sobre Mim</h2>
+                <p>
+                   Desenvolvedor front-end apaixonado por criar interfaces modernas e responsivas. Especializado 
+                   em HTML5, CSS3 e JavaScript, com experiência em frameworks como React e Vue.js.
+                </p>
+                <p>
+                    Comprometido com boas práticas de desenvolvimento, acessibilidade e performance web. Sempre busco
+                    aprender novas tecnologias e melhorar minhas habilidades.
+                </p>
+            </article>
+
+            <article class="habilidades">
+                <h2><i class="fas fa-code"></i> Habilidades</h2>
+                <div class="habilidades-container">
+                    <ul class="lista-habilidades">
+                        <li><i class="fab fa-html5"></i> HTML5</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-react"></i> React.js</li>
+                        <li><i class="fab fa-vuejs"></i> Vue.js</li>
+                        <li><i class="fas fa-mobile-alt"></i> Design Responsivo</li>
+                        <li><i class="fas fa-universal-access"></i> Acessibilidade Web</li>
+                        <li><i class="fab fa-git-alt"></i> Git e Versionamento</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="projetos">
+                <h2><i class="fas fa-project-diagram"></i> Meus Projetos</h2>
+                
+                <div class="carrossel-container">
+                    <div id="projectsContainer" class="project-container">
+                        <!-- Os projetos serão inseridos aqui via JavaScript -->
+                    </div>
+                    
+                    <div class="carrossel-controles">
+                        <button id="prevProject" class="carrossel-botao">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="nextProject" class="carrossel-botao">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

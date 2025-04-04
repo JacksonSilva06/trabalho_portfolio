@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: rgba(45, 144, 243, 0.95);
+    background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+                      radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-bottom: 1px solid #e1e8ed;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.perfil-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #89F0CD;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-perfil h1 {
+    font-size: 3.0rem;
+    color: #d8effa;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: rgba(230, 240, 255, 0.9);
+    font-weight: 400;
+}
+
+/* REDES SOCIAIS */
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.lista-habilidades {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.lista-habilidades li {
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.lista-habilidades li:hover {
+    transform: translate(5px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.lista-habilidades .fa-html5 {color: #e34f26;}
+.lista-habilidades .fa-css3-alt {color: #1572b6;}
+.lista-habilidades .fa-js {color: #f7df1e;}
+.lista-habilidades .fa-react {color: #61dafb;}
+.lista-habilidades .fa-vuejs {color: #4fc08d;}
+.lista-habilidades .fa-mobile-alt {color: #8e44ad;}
+.lista-habilidades .fa-universal-access {color: #e67e22;}
+.lista-habilidades .fa-git-alt {color: #f14e32;}
+
+.fa-code {
+    align-items: flex-start;
+    font-size: 1.5rem;
+    color: #0fbda6;
+}
+.fa-user {
+    color: #0fbda6;
+}
+.habilidades-container {
+    font-size: 1.2rem;
+}
+
+
+
+.botao-rede {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 1rem;
+}
+
+.botao-rede:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.botao-rede[href*="linkedin"] {
+    background-color: rgba(0, 119, 181, 0.7);
+}
+
+.botao-rede[href*="linkedin"]:hover {
+    background-color: #006097;
+}
+
+.botao-rede[href*="github"] {
+    background-color: rgba(51, 51, 51, 0.7);
+}
+
+.botao-rede[href*="github"]:hover {
+    background-color: #222;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+article {
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+article h2 {
+    color: #073180;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+article h2 i {
+    font-size: 1.2rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .perfil-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .redes-sociais {
+        align-self: center;
+    }
+    
+    .foto-perfil {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .info-perfil h1 {
+        color: #fff;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    section {
+        padding: 20px;
+    }
+}
+
+/* ESTILOS DO CARROSEL */
+
+.projetos {
+    position: relative;
+}
+
+.carrosel-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+.fa-project-diagram {
+    align-items: flex-start;
+    font-size: 1.5rem;
+    color: #64e4f5;
+}
+
+.project-container {
+    min-height: 250px;
+    transition: all 0.3s ease;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
