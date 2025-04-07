@@ -7,6 +7,9 @@
     <title>Jackson Silva | Desenvolvedor Front-End</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -62,18 +65,48 @@
                 
                 <div class="carrossel-container">
                     <div id="projectsContainer" class="project-container">
-                        <!-- Os projetos serão inseridos aqui via JavaScript -->
+                        <!-- Projetos serão injetados aqui via JavaScript -->
                     </div>
                     
                     <div class="carrossel-controles">
-                        <button id="prevProject" class="carrossel-botao">
+                        <button id="prevProject" class="carrossel-botao" aria-label="Projeto anterior">
                             <i class="fas fa-chevron-left"></i>
                         </button>
-                        <button id="nextProject" class="carrossel-botao">
+                        <div class="projeto-indicadores" id="projetoIndicadores">
+                            <!-- Indicadores serão adicionados dinamicamente -->
+                        </div>
+                        <button id="nextProject" class="carrossel-botao" aria-label="Próximo projeto">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
                 </div>
+            </article>
+            <article class="contato">
+                <h2><i class="fas fa-envelope"></i> Contato</h2>
+                <form id="form-contato" class="form-contato">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        <span class="erro" id="erro-nome"></span>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        <span class="erro" id="erro-email"></span>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                        <span class="erro" id="erro-mensagem"></span>
+                    </div>
+            
+                    <button type="submit" id="botao-enviar" class="botao-enviar">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+                <div id="mensagem-sucesso" class="mensagem-sucesso"></div>
             </article>
         </main>
     </div>
